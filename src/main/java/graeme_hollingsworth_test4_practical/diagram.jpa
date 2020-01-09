@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ptype="MONOLITH" ppkg="graeme_hollingsworth_test4_practical" epkg="entities" v="5.2" rws="_15559600280452" cws="_15559600280452" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_15559600280451" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="ShapePK" abs="true" class="Shape" v="true" jbn="false" xre="false" m="false" rootElement="_15559600280451" id="_15559600356793">
+        <jpa:inf e="true" n="graeme_hollingsworth_test4_practical.ShapeInterface"/>
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="area" id="_15559600729476">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15559600357074">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Shape.findAll">
+            <jpa:query>Select e from Shape e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Shape.findByArea">
+            <jpa:query>Select s from Shape s where s.area=:area</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="SquarePK" abs="false" class="Square" superclassId="_15559600356793" v="true" jbn="false" xre="false" m="false" rootElement="_15559600280451" id="_15559600810567">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="theLength" id="_155596009310710">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="width" id="_155596009765111">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Square.findAll">
+            <jpa:query>Select e from Square e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Square.findByTheLength">
+            <jpa:query>Select s from Square s where s.theLength=:theLength</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Square.findByWidth">
+            <jpa:query>Select s from Square s where s.width=:width</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TrianglePK" abs="false" class="Triangle" superclassId="_15559600356793" v="true" jbn="false" xre="false" m="false" rootElement="_15559600280451" id="_155596010420112">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="base" id="_155596011907515">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="height" id="_155596012505916">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Triangle.findAll">
+            <jpa:query>Select e from Triangle e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Triangle.findByBase">
+            <jpa:query>Select t from Triangle t where t.base=:base</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Triangle.findByHeight">
+            <jpa:query>Select t from Triangle t where t.height=:height</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_15559600280452">
+            <i ref="_15559600810567" x="231" y="254"/>
+            <i ref="_15559600356793" x="440" y="114"/>
+            <i ref="_155596010420112" x="610" y="254"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

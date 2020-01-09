@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ptype="MONOLITH" ppkg="Lab5" epkg="entities" v="5.2" rws="_155551026357422" Pws="_155551026357422" cws="_155551026357422" persistenceUnitName="Lab5_graeme_hollingsworth" sm="false" xs="false" id="_155551026357421" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="BookPK" abs="false" class="Book" superclassId="_155551058548441" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551054164229">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="Author" id="_155551093047850">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Book.findAll">
+            <jpa:query>Select e from Book e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Book.findByAuthor">
+            <jpa:query>Select b from Book b where b.Author=:Author</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Book.findByAttribute1">
+            <jpa:query>Select b from Book b where b.attribute1=:attribute1</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="CashTillPK" abs="false" class="CashTill" superclassId="_155551058548441" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551054889732">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="float" v="true" xvt="" name="amount" id="_155551130544759">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="CashTill.findAll">
+            <jpa:query>Select e from CashTill e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="CashTill.findByAmount">
+            <jpa:query>Select c from CashTill c where c.amount=:amount</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="DiscMagPK" abs="false" class="DiscMag" superclassId="_155551056808038" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551055976935">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes/>
+        <jpa:nq e="false" name="DiscMag.findAll">
+            <jpa:query>Select e from DiscMag e</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="MagazinePK" abs="false" class="Magazine" superclassId="_155551058548441" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551056808038">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="currIssue" id="_155551111402352">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="orderQty" id="_155551111999953">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Magazine.findAll">
+            <jpa:query>Select e from Magazine e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Magazine.findByCurrIssue">
+            <jpa:query>Select m from Magazine m where m.currIssue=:currIssue</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Magazine.findByOrderQty">
+            <jpa:query>Select m from Magazine m where m.orderQty=:orderQty</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="PublicationPK" abs="true" class="Publication" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551058548441">
+        <jpa:inf e="true" n="Lab4.SaleableItem"/>
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="Title" id="_155551076244647">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="Copies" id="_155551076823048">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="float" v="true" xvt="" name="Price" id="_155551077255849">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_155551058548542">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Publication.findAll">
+            <jpa:query>Select e from Publication e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Publication.findByTitle">
+            <jpa:query>Select p from Publication p where p.Title=:Title</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Publication.findByCopies">
+            <jpa:query>Select p from Publication p where p.Copies=:Copies</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Publication.findByPrice">
+            <jpa:query>Select p from Publication p where p.Price=:Price</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TicketPK" abs="false" class="Ticket" superclassId="_155551058548441" v="true" jbn="false" xre="false" m="false" rootElement="_155551026357421" id="_155551060821844">
+        <jpa:ath>17009434</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="TicketQty" id="_155551126065758">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Ticket.findAll">
+            <jpa:query>Select e from Ticket e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Ticket.findByTicketQty">
+            <jpa:query>Select t from Ticket t where t.TicketQty=:TicketQty</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_155551026357422">
+            <i ref="_155551054889732" x="75" y="70"/>
+            <i ref="_155551056808038" x="367" y="204"/>
+            <i ref="_155551055976935" x="370" y="335"/>
+            <i ref="_155551054164229" x="94" y="204"/>
+            <i ref="_155551058548441" x="250" y="32"/>
+            <i ref="_155551060821844" x="492" y="70"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
